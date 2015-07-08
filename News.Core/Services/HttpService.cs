@@ -1,0 +1,37 @@
+﻿using System;
+using System.Threading.Tasks;
+using System.Net.Http;
+using ModernHttpClient;
+using Newtonsoft.Json;
+
+namespace News.Core
+{
+    public interface IHttpService
+    {
+        Task<T> ReadContentAsync<T>(HttpResponseMessage response);
+        Task<HttpResponseMessage> GetAsync (string url);
+    }
+
+    public class HttpService : IHttpService
+    {
+        public HttpService ()
+        {
+        }
+
+        public async Task<T> ReadContentAsync<T>(HttpResponseMessage response) {
+            var message = await response.Content.ReadAsStringAsync ();
+            var content = JsonConvert.DeserializeObject<T> (message);
+            return content;
+        }
+
+        public async Task<HttpResponseMessage> GetAsync (string url)
+        {
+            using (var client = new HttpClient (new NativeMessageHandler ())) {
+                var address = string.Format ("{0}{1}", Api.BaseUrl, url);
+                var response = await client.GetAsync (address);
+                return response;
+            }
+        }
+    }
+}
+

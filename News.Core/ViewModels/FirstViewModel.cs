@@ -33,9 +33,9 @@ namespace News.Core.ViewModels
 
         private async void DoGetCategories()
         {
-            var test = await _articleService.GetCategories ();
-            var a = await _articleService.GetCategory(22);
+            var superCat = await _articleService.GetCategories ();
+            var category = await _articleService.GetCategory(22);
+            var article = await _articleService.GetArticle (33);
         }
     }
 }
-    

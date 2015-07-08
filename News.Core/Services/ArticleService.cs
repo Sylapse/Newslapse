@@ -7,6 +7,7 @@ namespace News.Core
     public interface IArticleService {
         Task<SuperCategory> GetCategories ();
         Task<Category> GetCategory(int id);
+        Task<Article> GetArticle(int id);
     }
 
     public class ArticleService : IArticleService
@@ -19,18 +20,26 @@ namespace News.Core
             _httpService = httpService;
         }
 
-        public async Task<SuperCategory> GetCategories()
+        public Task<SuperCategory> GetCategories()
         {
-            var response = await _httpService.GetAsync ("Raven.Api/Item/21");
-            var superCategory = await _httpService.ReadContentAsync<SuperCategory> (response);
-            return superCategory;
+            return GetContentItem<SuperCategory> (21);
         }
 
-        public async Task<Category> GetCategory(int id)
+        public Task<Category> GetCategory(int id)
         {
-            var response = await _httpService.GetAsync (string.Format("Raven.Api/Item/{0}", id));
-            var category = await _httpService.ReadContentAsync<Category> (response);
-            return category;
+            return GetContentItem<Category> (id);
+        }
+
+        public Task<Article> GetArticle(int id)
+        {
+            return GetContentItem<Article> (id);
+        }
+
+        private async Task<T> GetContentItem<T>(int id)
+        {
+            var response = await _httpService.GetAsync (string.Format("api/Raven.Api/Item/{0}", id));
+            var item = await _httpService.ReadContentAsync<T> (response);
+            return item;
         }
     }
 }

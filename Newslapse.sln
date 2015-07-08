@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Droid", "News.Droid\Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Droid.UITests", "News.Droid.UITests\News.Droid.UITests.csproj", "{F88B676B-1C7E-439A-BFDA-A6B36D8A120D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Core", "News.Core\News.Core.csproj", "{4139B576-D660-48DE-8E29-E83CA2D81C51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3DFF4B0B-D832-4B14-8787-A078B3F29D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DFF4B0B-D832-4B14-8787-A078B3F29D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DFF4B0B-D832-4B14-8787-A078B3F29D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4139B576-D660-48DE-8E29-E83CA2D81C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4139B576-D660-48DE-8E29-E83CA2D81C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4139B576-D660-48DE-8E29-E83CA2D81C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4139B576-D660-48DE-8E29-E83CA2D81C51}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F88B676B-1C7E-439A-BFDA-A6B36D8A120D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F88B676B-1C7E-439A-BFDA-A6B36D8A120D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F88B676B-1C7E-439A-BFDA-A6B36D8A120D}.Release|Any CPU.ActiveCfg = Release|Any CPU

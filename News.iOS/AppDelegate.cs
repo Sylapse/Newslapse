@@ -1,14 +1,18 @@
 ﻿using Foundation;
 using UIKit;
+using Cirrious.MvvmCross.Touch.Platform;
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace News.iOS
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
 	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate
+	public class AppDelegate : MvxApplicationDelegate
 	{
 		// class-level declarations
+		UIWindow _window;
 
 		public override UIWindow Window {
 			get;
@@ -24,6 +28,16 @@ namespace News.iOS
 //			#if ENABLE_TEST_CLOUD
 //			Xamarin.Calabash.Start();
 //			#endif
+
+			_window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			var setup = new Setup(this, _window);
+			setup.Initialize();
+
+			var startup = Mvx.Resolve<IMvxAppStart>();
+			startup.Start();
+
+			_window.MakeKeyAndVisible();
 
 			return true;
 		}

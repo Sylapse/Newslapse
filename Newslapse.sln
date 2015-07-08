@@ -82,4 +82,17 @@ Global
 		{FFA2F375-267F-41D7-BB10-A7222951EDD8}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{FFA2F375-267F-41D7-BB10-A7222951EDD8}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.FileWidth = 120
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.AfterDelegateDeclarationParameterComma = True
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+	EndGlobalSection
 EndGlobal

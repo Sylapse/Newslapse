@@ -37,6 +37,8 @@
     <Compile Include="TransferModels\SuperCategory.cs" />
     <Compile Include="TransferModels\Category.cs" />
     <Compile Include="TransferModels\Article.cs" />
+    <Compile Include="Services\HttpService.cs" />
+    <Compile Include="Services\ArticleService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

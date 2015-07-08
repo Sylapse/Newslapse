@@ -34,8 +34,6 @@
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="Constants\Api.cs" />
-    <Compile Include="Services\HttpService.cs" />
-    <Compile Include="Services\ArticleService.cs" />
     <Compile Include="TransferModels\SuperCategory.cs" />
     <Compile Include="TransferModels\Category.cs" />
     <Compile Include="TransferModels\Article.cs" />

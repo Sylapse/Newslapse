@@ -89,6 +89,7 @@
     <Compile Include="Views\ArticleView.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="CustomBindings\MvxTextViewTextTargetBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -120,5 +121,8 @@
       <Project>{4139B576-D660-48DE-8E29-E83CA2D81C51}</Project>
       <Name>News.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomBindings\" />
   </ItemGroup>
 </Project>

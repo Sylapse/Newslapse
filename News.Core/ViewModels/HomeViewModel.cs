@@ -19,7 +19,7 @@ namespace News.Core.ViewModels
         public async void Init()
         {
             var superCategory = await _articleService.GetSuperCategory ();
-            CategorySummaries = superCategory.CategorySummaries;
+            CategorySummaries = superCategory.Terms;
         }
 
         private IList<CategorySummary> _categorySummaries;

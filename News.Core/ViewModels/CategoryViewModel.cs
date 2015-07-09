@@ -20,7 +20,7 @@ namespace News.Core.ViewModels
         {
             Title = categorySummary.Title;
             var category = await _articleService.GetCategory (categorySummary.Id);
-            ArticleSummaries = category.ArticleSummaries;
+            ArticleSummaries = category.Items;
         }
 
         private string _title;

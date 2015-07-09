@@ -13,7 +13,6 @@ namespace News.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.view_home);
-            FindViewById<ListView> (Resource.Id.listView).EmptyView = FindViewById (Resource.Id.progressBar);
         }
     }
 }

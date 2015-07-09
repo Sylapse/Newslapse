@@ -8,11 +8,12 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        local:MvxBind="ItemsSource CategorySummaries; ItemClick ItemSelected"
+        local:MvxBind="ItemsSource CategorySummaries; ItemClick ItemSelected; Visibility Visibility(CategorySummaries)"
         local:MvxItemTemplate="@layout/cell_category" />
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        local:MvxBind="Visibility InvertedVisibility(CategorySummaries)" />
 </RelativeLayout>

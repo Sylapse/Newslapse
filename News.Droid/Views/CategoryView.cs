@@ -16,7 +16,6 @@ namespace News.Droid.Views
             base.OnCreate(bundle);
             Title = ViewModel.Title;
             SetContentView(Resource.Layout.view_category);
-            FindViewById<ListView> (Resource.Id.listView).EmptyView = FindViewById (Resource.Id.progressBar);
         }
     }
 }

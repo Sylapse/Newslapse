@@ -95,8 +95,8 @@
     <Compile Include="Views\ArticleView.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
-    <Compile Include="CustomBindings\MvxTextViewTextTargetBinding.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="CustomBindings\CustomTextViewHtmlTargetBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

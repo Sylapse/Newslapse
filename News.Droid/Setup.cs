@@ -27,7 +27,7 @@ namespace News.Droid
         protected override void FillTargetFactories (Cirrious.MvvmCross.Binding.Bindings.Target.Construction.IMvxTargetBindingFactoryRegistry registry)
         {
             base.FillTargetFactories (registry);
-            registry.RegisterCustomBindingFactory<TextView>("Html", textView => new MvxTextViewHtmlTargetBinding(textView));
+            registry.RegisterCustomBindingFactory<TextView>("Html", textView => new CustomTextViewHtmlTargetBinding(textView));
         }
     }
 }

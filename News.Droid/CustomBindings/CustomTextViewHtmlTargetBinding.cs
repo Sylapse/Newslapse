@@ -8,10 +8,10 @@ using Cirrious.MvvmCross.Binding;
 
 namespace News.Droid.CustomBindings
 {
-    public class MvxTextViewHtmlTargetBinding
+    public class CustomTextViewHtmlTargetBinding
         : MvxTextViewTextTargetBinding
     {
-        public MvxTextViewHtmlTargetBinding(TextView target)
+        public CustomTextViewHtmlTargetBinding(TextView target)
             : base(target)
         {
         }

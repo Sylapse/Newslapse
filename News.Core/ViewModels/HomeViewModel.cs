@@ -6,8 +6,7 @@ using System.Collections.Generic;
 
 namespace News.Core.ViewModels
 {
-    public class HomeViewModel
-        : MvxViewModel
+    public class HomeViewModel : MvxViewModel
     {
         private readonly IArticleService _articleService;
 

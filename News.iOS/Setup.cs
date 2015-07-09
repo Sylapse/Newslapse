@@ -2,6 +2,7 @@ using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Touch.Platform;
 using UIKit;
+using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
 
 namespace News.iOS
 {
@@ -20,6 +21,12 @@ namespace News.iOS
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();
+        }
+
+        protected override void FillTargetFactories (Cirrious.MvvmCross.Binding.Bindings.Target.Construction.IMvxTargetBindingFactoryRegistry registry)
+        {
+            base.FillTargetFactories (registry);
+            registry.RegisterCustomBindingFactory<UITextView> ("Html", view => new CustomUITextViewHtmlTargetBinding(view));
         }
 	}
 }

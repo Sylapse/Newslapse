@@ -6,8 +6,7 @@ using System.Windows.Input;
 
 namespace News.Core.ViewModels
 {
-    public class CategoryViewModel
-        : MvxViewModel
+    public class CategoryViewModel : MvxViewModel
     {
         private readonly IArticleService _articleService;
 

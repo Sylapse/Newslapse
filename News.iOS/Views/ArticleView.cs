@@ -14,6 +14,7 @@ namespace News.iOS.Views
     public partial class ArticleView : MvxViewController<ArticleViewModel>
 	{
         private MvxImageViewLoader _imageLoader;
+
         public ArticleView () : base ("ArticleView", null)
 		{
 		}
@@ -22,23 +23,14 @@ namespace News.iOS.Views
 		{
 			base.ViewDidLoad ();
             Title = ViewModel.Title;
-
             _imageLoader = new MvxImageViewLoader (() => ImageView);
 
             var set = this.CreateBindingSet<ArticleView, ArticleViewModel> ();
             set.Bind (ScrollView).For ("Visibility").To (vm => vm.Body).WithConversion ("Visibility");
             set.Bind (ActivityIndicator).For ("Visibility").To (vm => vm.Body).WithConversion ("InvertedVisibility");
             set.Bind (_imageLoader).To (vm => vm.ImageUrl);
-        //    set.Bind (TextView).To (vm => vm.Body);
+            set.Bind (TextView).For ("Html").To (vm => vm.Body);
 			set.Apply ();
-
-            ViewModel.PropertyChanged += (object sender, System.ComponentModel.PropertyChangedEventArgs e) => {
-                if (e.PropertyName == "Body") {
-                    NSError error = null;
-                    var attributedString = new NSAttributedString(ViewModel.Body, new NSAttributedStringDocumentAttributes { DocumentType = NSDocumentType.HTML }, ref error);
-                    TextView.AttributedText = attributedString;
-                }
-            };
         }
 	}
 }

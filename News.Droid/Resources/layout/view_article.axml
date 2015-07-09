@@ -4,9 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Mvx.MvxImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="ImageUrl ImageUrl" />
     <TextView
         android:text="Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="Text Title" />
+        local:MvxBind="Text Body" />
 </LinearLayout>

@@ -1,19 +1,23 @@
 ﻿using System;
-using Android.App;
 using Cirrious.MvvmCross.Droid.Views;
+using Android.App;
 using Android.OS;
 using Android.Widget;
+using News.Core.ViewModels;
+using System.ComponentModel;
 
 namespace News.Droid.Views
 {
-    [Activity(Label = "Home")]
-    public class HomeView : MvxActivity
+    [Activity]
+    public class CategoryView : MvxActivity<CategoryViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.view_home);
+            Title = ViewModel.Title;
+            SetContentView(Resource.Layout.view_category);
             FindViewById<ListView> (Resource.Id.listView).EmptyView = FindViewById (Resource.Id.progressBar);
         }
     }
 }
+

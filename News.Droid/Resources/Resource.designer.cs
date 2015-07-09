@@ -87,8 +87,14 @@ namespace News.Droid
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
 			
+			// aapt resource value: 0x7f040002
+			public const int listView = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int progressBar = 2130968579;
+			
 			// aapt resource value: 0x7f040001
-			public const int myButton = 2130968577;
+			public const int textView1 = 2130968577;
 			
 			static Id()
 			{
@@ -104,13 +110,13 @@ namespace News.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int FirstView = 2130903040;
+			public const int cell_category = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int SplashScreen = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int SplashScreen = 2130903042;
+			public const int view_home = 2130903042;
 			
 			static Layout()
 			{

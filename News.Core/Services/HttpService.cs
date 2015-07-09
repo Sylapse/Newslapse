@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace News.Core
+namespace News.Core.Services
 {
     public interface IHttpService
     {

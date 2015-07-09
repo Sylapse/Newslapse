@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace News.Core
+namespace News.Core.Services
 {
     public interface IArticleService {
-        Task<SuperCategory> GetCategories ();
+        Task<SuperCategory> GetSuperCategory ();
         Task<Category> GetCategory(int id);
         Task<Article> GetArticle(int id);
     }
@@ -20,7 +20,7 @@ namespace News.Core
             _httpService = httpService;
         }
 
-        public Task<SuperCategory> GetCategories()
+        public Task<SuperCategory> GetSuperCategory()
         {
             return GetContentItem<SuperCategory> (21);
         }

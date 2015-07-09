@@ -95,6 +95,18 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Touch">
       <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Visibility.Touch.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.DownloadCache.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -103,6 +115,7 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="Views\HomeView.xib" />
     <InterfaceDefinition Include="Views\CategoryView.xib" />
+    <InterfaceDefinition Include="Views\ArticleView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -126,6 +139,12 @@
     <Compile Include="Views\CategoryView.designer.cs">
       <DependentUpon>CategoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ArticleView.designer.cs">
+      <DependentUpon>ArticleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArticleView.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

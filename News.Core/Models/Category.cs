@@ -7,8 +7,8 @@ namespace News.Core
     [DataContract]
     public class Category : BaseCategory
     {
-        [DataMember]
-        public IList<ArticleSummary> Items { get; set; }
+        [DataMember(Name = "Items")]
+        public IList<ArticleSummary> ArticleSummaries { get; set; }
     }
 
     [DataContract]

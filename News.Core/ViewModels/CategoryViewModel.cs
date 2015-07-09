@@ -16,16 +16,23 @@ namespace News.Core.ViewModels
             _articleService = articleService;
         }
 
-//        public async void Init()
-//        {
-//            var superCategory = await _articleService.GetSuperCategory ();
-//            CategorySummaries = superCategory.CategorySummaries;
-//        }
+        public async void Init(CategorySummary categorySummary)
+        {
+            Title = categorySummary.Title;
+            var category = await _articleService.GetCategory (categorySummary.Id);
+            ArticleSummaries = category.ArticleSummaries;
+        }
 
-        private IList<CategorySummary> _categorySummaries = new List<CategorySummary>();
-        public IList<CategorySummary> CategorySummaries {
-            get { return _categorySummaries; }
-            set { _categorySummaries = value; RaisePropertyChanged (() => CategorySummaries); }
+        private string _title;
+        public string Title {
+            get { return _title; }
+            set { _title = value; RaisePropertyChanged (() => Title); }
+        }
+
+        private IList<ArticleSummary> _articleSummaries = new List<ArticleSummary>();
+        public IList<ArticleSummary> ArticleSummaries {
+            get { return _articleSummaries; }
+            set { _articleSummaries = value; RaisePropertyChanged (() => ArticleSummaries); }
         }
     }
 }

@@ -2,6 +2,7 @@
 using Cirrious.MvvmCross.ViewModels;
 using News.Core.Services;
 using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace News.Core.ViewModels
 {
@@ -33,6 +34,19 @@ namespace News.Core.ViewModels
         public IList<ArticleSummary> ArticleSummaries {
             get { return _articleSummaries; }
             set { _articleSummaries = value; RaisePropertyChanged (() => ArticleSummaries); }
+        }
+
+        private MvxCommand<ArticleSummary> _itemSelected;
+        public ICommand ItemSelected {
+            get {
+                _itemSelected = _itemSelected ?? new MvxCommand<ArticleSummary>(DoSelectItem);
+                return _itemSelected;
+            }
+        }
+
+        private void DoSelectItem(ArticleSummary item)
+        {
+            ShowViewModel<ArticleViewModel>(item);
         }
     }
 }

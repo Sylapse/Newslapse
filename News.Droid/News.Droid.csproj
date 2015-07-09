@@ -74,6 +74,7 @@
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\HomeView.cs" />
     <Compile Include="Views\CategoryView.cs" />
+    <Compile Include="Views\ArticleView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -97,6 +98,7 @@
     <AndroidResource Include="Resources\layout\cell_category.axml" />
     <AndroidResource Include="Resources\layout\view_category.axml" />
     <AndroidResource Include="Resources\layout\cell_article.axml" />
+    <AndroidResource Include="Resources\layout\view_article.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

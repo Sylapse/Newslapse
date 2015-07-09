@@ -15,10 +15,9 @@ namespace News.Core.ViewModels
             IArticleService articleService)
         {
             _articleService = articleService;
-            Init ();
         }
 
-        private async void Init()
+        public async void Init()
         {
             var superCategory = await _articleService.GetSuperCategory ();
             CategorySummaries = superCategory.CategorySummaries;
@@ -28,6 +27,19 @@ namespace News.Core.ViewModels
         public IList<CategorySummary> CategorySummaries {
             get { return _categorySummaries; }
             set { _categorySummaries = value; RaisePropertyChanged (() => CategorySummaries); }
+        }
+
+        private MvxCommand<CategorySummary> _itemSelected;
+        public ICommand ItemSelected {
+            get {
+                _itemSelected = _itemSelected ?? new MvxCommand<CategorySummary>(DoSelectItem);
+                return _itemSelected;
+            }
+        }
+
+        private void DoSelectItem(CategorySummary item)
+        {
+            ShowViewModel<CategoryViewModel>(item);
         }
     }
 }

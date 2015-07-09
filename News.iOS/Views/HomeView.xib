@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView">
+            <connections>
+                <outlet property="ActivityIndicator" destination="6Xl-TD-ZO5" id="BTm-pK-6W3"/>
+                <outlet property="TableView" destination="HbF-jx-YoM" id="Xhy-m8-sRs"/>
+                <outlet property="view" destination="1" id="aWe-Ri-w4J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HbF-jx-YoM">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6Xl-TD-ZO5">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HbF-jx-YoM" secondAttribute="bottom" id="8sz-Kl-8Ni"/>
+                <constraint firstItem="HbF-jx-YoM" firstAttribute="top" secondItem="1" secondAttribute="top" id="9h4-DR-jbS"/>
+                <constraint firstAttribute="centerY" secondItem="6Xl-TD-ZO5" secondAttribute="centerY" id="Fir-NC-dxc"/>
+                <constraint firstItem="HbF-jx-YoM" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="T5E-3m-3fa"/>
+                <constraint firstAttribute="trailing" secondItem="HbF-jx-YoM" secondAttribute="trailing" id="UYj-mz-S1S"/>
+                <constraint firstAttribute="centerX" secondItem="6Xl-TD-ZO5" secondAttribute="centerX" id="yiC-NT-XQc"/>
+            </constraints>
+            <point key="canvasLocation" x="384" y="461"/>
+        </view>
+    </objects>
+</document>

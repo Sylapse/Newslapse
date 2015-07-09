@@ -5,8 +5,7 @@ using System.Linq;
 
 namespace News.Core.ViewModels
 {
-    public class ArticleViewModel
-        : MvxViewModel
+    public class ArticleViewModel : MvxViewModel
     {
         private readonly IArticleService _articleService;
 

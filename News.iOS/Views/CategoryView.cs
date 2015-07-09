@@ -11,27 +11,27 @@ using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace News.iOS.Views
 {
-	public partial class HomeView : MvxViewController
+    public partial class CategoryView : MvxViewController<CategoryViewModel>
 	{
-        public HomeView () : base ("HomeView", null)
+        public CategoryView () : base ("CategoryView", null)
 		{
 		}
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-            Title = "Home";
+            Title = ViewModel.Title;
 
             var source = new MvxStandardTableViewSource (TableView, "TitleText Title");
             TableView.Source = source;
 
-			var set = this.CreateBindingSet<HomeView, HomeViewModel> ();
-            set.Bind (TableView).For ("Visibility").To (vm => vm.CategorySummaries).WithConversion ("Visibility");
-            set.Bind (ActivityIndicator).For ("Visibility").To (vm => vm.CategorySummaries).WithConversion ("InvertedVisibility");
-            set.Bind (source).To (vm => vm.CategorySummaries);
+            var set = this.CreateBindingSet<CategoryView, CategoryViewModel> ();
+            set.Bind (TableView).For ("Visibility").To (vm => vm.ArticleSummaries).WithConversion ("Visibility");
+            set.Bind (ActivityIndicator).For ("Visibility").To (vm => vm.ArticleSummaries).WithConversion ("InvertedVisibility");
+            set.Bind (source).To (vm => vm.ArticleSummaries);
             set.Bind (source).For (s => s.SelectionChangedCommand).To (vm => vm.ItemSelected);
 			set.Apply ();
-		}
+        }
 
         public override void ViewWillAppear (bool animated)
         {

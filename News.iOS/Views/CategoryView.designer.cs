@@ -9,8 +9,8 @@ using System.CodeDom.Compiler;
 
 namespace News.iOS.Views
 {
-	[Register ("HomeView")]
-	partial class HomeView
+	[Register ("CategoryView")]
+	partial class CategoryView
 	{
 		[Outlet]
 		UIKit.UIActivityIndicatorView ActivityIndicator { get; set; }

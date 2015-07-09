@@ -23,7 +23,7 @@ namespace News.Core.ViewModels
             CategorySummaries = superCategory.CategorySummaries;
         }
 
-        private IList<CategorySummary> _categorySummaries = new List<CategorySummary>();
+        private IList<CategorySummary> _categorySummaries;
         public IList<CategorySummary> CategorySummaries {
             get { return _categorySummaries; }
             set { _categorySummaries = value; RaisePropertyChanged (() => CategorySummaries); }

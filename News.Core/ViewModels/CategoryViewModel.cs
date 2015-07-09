@@ -29,7 +29,7 @@ namespace News.Core.ViewModels
             set { _title = value; RaisePropertyChanged (() => Title); }
         }
 
-        private IList<ArticleSummary> _articleSummaries = new List<ArticleSummary>();
+        private IList<ArticleSummary> _articleSummaries;
         public IList<ArticleSummary> ArticleSummaries {
             get { return _articleSummaries; }
             set { _articleSummaries = value; RaisePropertyChanged (() => ArticleSummaries); }

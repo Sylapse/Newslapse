@@ -87,11 +87,11 @@ namespace News.Droid
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
 			
-			// aapt resource value: 0x7f040002
-			public const int listView = 2130968578;
-			
 			// aapt resource value: 0x7f040003
-			public const int progressBar = 2130968579;
+			public const int listView = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int progressBar = 2130968578;
 			
 			// aapt resource value: 0x7f040001
 			public const int textView1 = 2130968577;
@@ -119,10 +119,13 @@ namespace News.Droid
 			public const int SplashScreen = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int view_category = 2130903043;
+			public const int view_article = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int view_home = 2130903044;
+			public const int view_category = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int view_home = 2130903045;
 			
 			static Layout()
 			{

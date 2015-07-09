@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        local:MvxBind="ItemsSource ArticleSummaries"
+        local:MvxBind="ItemsSource ArticleSummaries; ItemClick ItemSelected"
         local:MvxItemTemplate="@layout/cell_article" />
     <ProgressBar
         android:id="@+id/progressBar"

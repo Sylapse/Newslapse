@@ -37,7 +37,7 @@ namespace News.Core.Services
 
         private async Task<T> GetContentItem<T>(int id)
         {
-            var response = await _httpService.GetAsync (string.Format("api/Raven.Api/Item/{0}", id));
+            var response = await _httpService.GetAsync (string.Format("/api/Raven.Api/Item/{0}", id));
             var item = await _httpService.ReadContentAsync<T> (response);
             return item;
         }

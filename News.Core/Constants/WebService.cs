@@ -2,7 +2,7 @@
 
 namespace News.Core
 {
-    public static class Api
+    public static class WebService
     {
         public const string BaseUrl = "http://192.168.110.11:94";
     }

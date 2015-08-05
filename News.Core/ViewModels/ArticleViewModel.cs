@@ -22,7 +22,7 @@ namespace News.Core.ViewModels
             Body = article.Body;
             var image = article.Images.FirstOrDefault ();
             if (image != null)
-                ImageUrl = string.Format ("{0}{1}", Api.BaseUrl, image.Url);
+                ImageUrl = string.Format ("{0}{1}", WebService.BaseUrl, image.Url);
         }
 
         private string _title;

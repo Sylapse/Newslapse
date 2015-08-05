@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Net.Http;
-using ModernHttpClient;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using ModernHttpClient;
 
 namespace News.Core.Services
 {
@@ -26,7 +26,7 @@ namespace News.Core.Services
         {
             using (var client = new HttpClient (new NativeMessageHandler ())) 
             {
-                var address = string.Format ("{0}{1}", Api.BaseUrl, url);
+                var address = string.Format ("{0}{1}", WebService.BaseUrl, url);
                 var response = await client.GetAsync (address);
                 return response;
             }

@@ -6,7 +6,7 @@ namespace News.Core
 {
     public class Article : BaseArticle
     {
-        public IList<Image> Images { get; set; }
+        public IList<Image> Image { get; set; }
     }
 
     public class ArticleSummary : BaseArticle

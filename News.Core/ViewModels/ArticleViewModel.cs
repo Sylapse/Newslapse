@@ -20,7 +20,7 @@ namespace News.Core.ViewModels
             Title = articleSummary.Title;
             var article = await _articleService.GetArticle (articleSummary.Id);
             Body = article.Body;
-            var image = article.Images.FirstOrDefault ();
+            var image = article.Image.FirstOrDefault ();
             if (image != null)
                 ImageUrl = string.Format ("{0}{1}", WebService.BaseUrl, image.Url);
         }

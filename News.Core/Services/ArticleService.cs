@@ -22,7 +22,7 @@ namespace News.Core.Services
 
         public Task<SuperCategory> GetSuperCategory()
         {
-            return GetContentItem<SuperCategory> (21);
+            return GetContentItem<SuperCategory> (15);
         }
 
         public Task<Category> GetCategory(int id)
@@ -37,7 +37,7 @@ namespace News.Core.Services
 
         private async Task<T> GetContentItem<T>(int id)
         {
-            var response = await _httpService.GetAsync (string.Format("/api/Raven.Api/Item/{0}", id));
+            var response = await _httpService.GetAsync (string.Format("/api/Contents/Item/Display/{0}", id));
             var item = await _httpService.ReadContentAsync<T> (response);
             return item;
         }

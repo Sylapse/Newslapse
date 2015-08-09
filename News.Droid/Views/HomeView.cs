@@ -6,7 +6,7 @@ using Android.Widget;
 
 namespace News.Droid.Views
 {
-    [Activity(Label = "Home")]
+    [Activity(Label = "Newslapse")]
     public class HomeView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)

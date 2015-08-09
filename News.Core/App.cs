@@ -11,7 +11,7 @@ namespace News.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				
-            RegisterAppStart<ViewModels.HomeViewModel>();
+            RegisterAppStart<ViewModels.SuperCategoryViewModel>();
         }
     }
 }

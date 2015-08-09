@@ -125,7 +125,7 @@ namespace News.Droid
 			public const int view_category = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int view_home = 2130903045;
+			public const int view_supercategory = 2130903045;
 			
 			static Layout()
 			{

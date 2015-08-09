@@ -90,13 +90,13 @@
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="Views\HomeView.cs" />
     <Compile Include="Views\CategoryView.cs" />
     <Compile Include="Views\ArticleView.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
     <Compile Include="CustomBindings\CustomTextViewHtmlTargetBinding.cs" />
+    <Compile Include="Views\SuperCategoryView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -116,11 +116,11 @@
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
-    <AndroidResource Include="Resources\layout\view_home.axml" />
     <AndroidResource Include="Resources\layout\cell_category.axml" />
     <AndroidResource Include="Resources\layout\view_category.axml" />
     <AndroidResource Include="Resources\layout\cell_article.axml" />
     <AndroidResource Include="Resources\layout\view_article.axml" />
+    <AndroidResource Include="Resources\layout\view_supercategory.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
